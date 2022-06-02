@@ -1,4 +1,5 @@
 const bookContainer = document.getElementById("book-container");
+//let count = 0;
 
 function Book(title, author, page) {
   this.title = title;
@@ -30,15 +31,23 @@ function addBookToLibrary() {
   let title = document.createElement("p");
   let author = document.createElement("p");
   let page = document.createElement("p");
+  let close = document.createElement("button");
   title.classList.add("title");
   author.classList.add("author");
   page.classList.add("page");
   nextBook.appendChild(title);
   nextBook.appendChild(author);
   nextBook.appendChild(page);
+  nextBook.appendChild(close);
+  close.innerHTML = "Remove";
+  close.onclick = function () {
+    nextBookXL.remove();
+  };
   title.textContent = newBook.title;
   author.textContent = `Written by: ${newBook.author}`;
   page.textContent = `Number of pages: ${newBook.page}`;
+  //count++;
+  //nextBook.setAttribute("date", count);
 }
 
 function showForm() {
