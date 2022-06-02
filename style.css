@@ -4,17 +4,19 @@
 }
 
 html {
+  --main-bg-color: yellow;
 }
 
 body {
   position: relative;
   background-color: rgb(89, 18, 30);
+  font-family: "Roboto", sans-serif;
 }
 
 .book-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 5vh 2vw;
+  margin: 3vh 2vw;
   border: 20px solid rgb(171, 110, 39);
   border-bottom: 3vh solid rgb(171, 110, 39);
   gap: 3vh 0px;
@@ -34,16 +36,20 @@ form {
   height: 300px;
   width: 250px;
   background-color: #fff;
+  z-index: 7;
+}
+
+.hide {
   display: none;
 }
 
 .book-XL {
   width: max(280px, 11vw);
-  height: 40vh;
+  height: 39vh;
   z-index: 6;
   background-color: rgb(89, 56, 18);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: end;
   flex: 1 0 25%;
 }
@@ -61,4 +67,37 @@ form {
 
 .book-XL:last-child {
   flex: 1 1 100%;
+  display: none;
+}
+
+.title {
+  font-size: 36px;
+  background-color: rgba(78, 78, 78, 0.428);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 60px;
+}
+
+.author {
+  font-size: 24px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.page {
+  font-size: 24px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: max(2.5vw, 30px);
+  color: #fff;
+  margin-top: 2vh;
+}
+
+.addBook {
+  height: 15%;
+  font-size: 20px;
 }
